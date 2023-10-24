@@ -1,0 +1,120 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Carlos Orduz\\Documents\\Multitracks Interview\\.net\\MultiTracksAPI\\MultiTracksAPI.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Carlos Orduz\\Documents\\Multitracks Interview\\.net\\Core\\MTDataAccess\\MTDataAccess.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Carlos Orduz\\Documents\\Multitracks Interview\\.net\\Core\\MTDataAccess\\MTDataAccess.csproj",
+        "projectName": "MTDataAccess",
+        "projectPath": "C:\\Users\\Carlos Orduz\\Documents\\Multitracks Interview\\.net\\Core\\MTDataAccess\\MTDataAccess.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "C:\\Users\\Carlos Orduz\\Documents\\Multitracks Interview\\.net\\MultiTracksAPI\\MultiTracksAPI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Carlos Orduz\\Documents\\Multitracks Interview\\.net\\MultiTracksAPI\\MultiTracksAPI.csproj",
+        "projectName": "MultiTracksAPI",
+        "projectPath": "C:\\Users\\Carlos Orduz\\Documents\\Multitracks Interview\\.net\\MultiTracksAPI\\MultiTracksAPI.csproj",
+        "packagesPath": "C:\\Users\\Carlos Orduz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Carlos Orduz\\Documents\\Multitracks Interview\\.net\\MultiTracksAPI\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Carlos Orduz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Carlos Orduz\\Documents\\Multitracks Interview\\.net\\Core\\MTDataAccess\\MTDataAccess.csproj": {
+                "projectPath": "C:\\Users\\Carlos Orduz\\Documents\\Multitracks Interview\\.net\\Core\\MTDataAccess\\MTDataAccess.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNet.WebApi.Core": {
+              "target": "Package",
+              "version": "[5.3.0, )"
+            },
+            "Microsoft.Data.Sqlite": {
+              "target": "Package",
+              "version": "[7.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.12, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[4.7.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
