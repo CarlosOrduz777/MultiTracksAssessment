@@ -14,18 +14,18 @@ namespace MultiTracksAPI.Artist.Application
             _artistRepository = artistRepository;
         }
 
-        public int CreateArtist(ArtistDto artist,SQL sql)
+        public int CreateArtist(ArtistDto artist)
         {
             if (artist == null) throw new ArtistNullException("Artist can not be null");
 
             if (artist.Title == null || artist.Biography == null || artist.ImageURL == null || artist.ImageURL == null)
                 throw new ArtistNullPropertiesException("Some properties are null, please review it");
-            return _artistRepository.PostArtist(artist,sql);
+            return _artistRepository.PostArtist(artist);
         }
 
-        public DataTable GetArtistByName(string artistName, SQL sql)
+        public DataTable GetArtistByName(string artistName)
         {
-            return _artistRepository.GetArtistByName(artistName, sql);
+            return _artistRepository.GetArtistByName(artistName);
         }
     }
 }

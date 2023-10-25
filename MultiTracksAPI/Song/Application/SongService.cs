@@ -13,10 +13,10 @@ namespace MultiTracksAPI.Song.Application
             _songRepository = songRepository;
         }
 
-        public List<DataTable> GetSongsPaged(SongPagination pagination, SQL sql)
+        public List<DataTable> GetSongsPaged(SongPagination pagination)
         {
             if(pagination == null) throw new ArgumentNullException("Pagination object cannot be null");
-            return _songRepository.GetSongsPaged(pagination, sql);
+            return _songRepository.GetSongsPaged(pagination);
         }
     }
 }

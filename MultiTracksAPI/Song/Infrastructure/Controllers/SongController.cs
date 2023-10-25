@@ -14,20 +14,15 @@ namespace MultiTracksAPI.Song.Infrastructure.Controllers
     public class SongController : Controller
     {
         private readonly SongService _songService;
-        private SQL _sql;
-        private readonly IConfiguration _configuration;
-        public SongController(SongService songService, IConfiguration configuration)
+        public SongController(SongService songService)
         {
             _songService = songService;
-            _configuration = configuration;
-            _sql = new ApiSql(_configuration.GetConnectionString("admin"));
-            
         }
 
         [Microsoft.AspNetCore.Mvc.HttpGet]
         public IActionResult GetSongsList([FromQuery] SongPagination pagination)
         {
-            var PaginationAndRecordDataTables = _songService.GetSongsPaged(pagination, _sql);
+            var PaginationAndRecordDataTables = _songService.GetSongsPaged(pagination);
             if (PaginationAndRecordDataTables == null) return StatusCode(500);
             var paginationInfo = PaginationAndRecordDataTables.ElementAt(0);
             var records = PaginationAndRecordDataTables.ElementAt(1);

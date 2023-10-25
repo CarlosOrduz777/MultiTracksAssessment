@@ -12,13 +12,10 @@ namespace MultiTracksAPI.Artist.Infrastructure.Controllers
     public class ArtistController : ControllerBase
     {
         public readonly ArtistService _artistService;
-        private readonly IConfiguration _configuration;
-        private SQL _sql;
+        
         public ArtistController(ArtistService artistService, IConfiguration configuration)
         {
             _artistService = artistService;
-            _configuration = configuration;
-            _sql = new ApiSql(_configuration.GetConnectionString("admin"));
         }
 
         /// <summary>
@@ -30,7 +27,7 @@ namespace MultiTracksAPI.Artist.Infrastructure.Controllers
         [ActionName("add")]
         public IActionResult Add([FromBody] ArtistDto artist)
         {
-            var result = _artistService.CreateArtist(artist,_sql);
+            var result = _artistService.CreateArtist(artist);
             return Ok(new
             {
                 Ok = result == 1,
@@ -45,7 +42,7 @@ namespace MultiTracksAPI.Artist.Infrastructure.Controllers
         [HttpGet]
         public IActionResult GetArtistByName([FromQuery] string ArtistName) 
         {
-            var result = _artistService.GetArtistByName(ArtistName,_sql);
+            var result = _artistService.GetArtistByName(ArtistName);
             return Ok(Newtonsoft.Json.JsonConvert.SerializeObject(result));
         }
     }

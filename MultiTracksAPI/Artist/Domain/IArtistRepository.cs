@@ -5,7 +5,7 @@ namespace MultiTracksAPI.Artist.Domain
 {
     public interface IArtistRepository
     {
-        int PostArtist(ArtistDto artist,SQL sql);
-        DataTable GetArtistByName(string artistName,SQL sql);
+        int PostArtist(ArtistDto artist);
+        DataTable GetArtistByName(string artistName);
     }
 }
