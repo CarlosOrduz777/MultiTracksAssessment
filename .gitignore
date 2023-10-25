@@ -2,5 +2,9 @@ Core/MTDataAccess/bin/
 Core/MTDataAccess/obj/
 DB/bin/
 DB/obj/
+DB/MultiTracksDB.jfm
 Web/multitracks.com/multitracks.com/Bin/
 packages/
+.vs/
+MultiTracksAPI/bin/
+MultiTracksAPI/obj/

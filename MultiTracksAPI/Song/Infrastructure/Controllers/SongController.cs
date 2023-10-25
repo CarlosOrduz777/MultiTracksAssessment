@@ -27,10 +27,10 @@ namespace MultiTracksAPI.Song.Infrastructure.Controllers
         [Microsoft.AspNetCore.Mvc.HttpGet]
         public IActionResult GetSongsList([FromQuery] SongPagination pagination)
         {
-            var result = _songService.GetSongsPaged(pagination, _sql);
-            if (result == null) return StatusCode(500);
-            var paginationInfo = result.ElementAt(0);
-            var records = result.ElementAt(1);
+            var PaginationAndRecordDataTables = _songService.GetSongsPaged(pagination, _sql);
+            if (PaginationAndRecordDataTables == null) return StatusCode(500);
+            var paginationInfo = PaginationAndRecordDataTables.ElementAt(0);
+            var records = PaginationAndRecordDataTables.ElementAt(1);
             var ObjectResult = new
             {
                 paginationInfo = new
